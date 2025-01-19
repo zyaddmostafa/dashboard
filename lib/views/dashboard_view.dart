@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:responsivedashboard/views/widgets/custom_drawer.dart';
+import 'package:responsivedashboard/views/widgets/adaptive_layout.dart';
+
+import 'package:responsivedashboard/views/widgets/dashboard_desktop_layout.dart';
 
 class DashboardView extends StatelessWidget {
   const DashboardView({super.key});
@@ -7,11 +9,10 @@ class DashboardView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Row(
-        children: [
-          Expanded(child: CustomDrawer()),
-        ],
-      ),
-    );
+        backgroundColor: Color(0xffF7F9FA),
+        body: AdaptiveLayout(
+            mobileLayout: (context) => SizedBox(),
+            tabletLayout: (context) => SizedBox(),
+            desktopLayout: (context) => DashboardDesktopLayout()));
   }
 }
