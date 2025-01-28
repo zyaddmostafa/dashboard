@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:responsivedashboard/utils/app_images.dart';
 import 'package:responsivedashboard/utils/styles.dart';
 import 'package:responsivedashboard/views/widgets/latest_transation_list_view.dart';
 
