@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:responsivedashboard/views/widgets/all_expenses_and_quick_invoice_section.dart';
 import 'package:responsivedashboard/views/widgets/custom_dot_indicator.dart';
 import 'package:responsivedashboard/views/widgets/custom_drawer.dart';
+import 'package:responsivedashboard/views/widgets/dots_indicator.dart';
 import 'package:responsivedashboard/views/widgets/my_card_page_view.dart';
+import 'package:responsivedashboard/views/widgets/my_card_section.dart';
+import 'package:responsivedashboard/views/widgets/transaction_history_section.dart';
 
 class DashboardDesktopLayout extends StatelessWidget {
   const DashboardDesktopLayout({super.key});
@@ -13,14 +16,16 @@ class DashboardDesktopLayout extends StatelessWidget {
       children: [
         Expanded(child: CustomDrawer()),
         SizedBox(
-          width: 27,
+          width: 32,
         ),
         Expanded(
           flex: 2,
           child: AllExpensesAndQuickInvoiceSection(),
         ),
-        Expanded(child: MyCardPageView()),
-        CustomDotIndicator(isActive: false),
+        SizedBox(
+          width: 24,
+        ),
+        Expanded(child: TransactionHistorySection())
       ],
     );
   }

@@ -10,7 +10,7 @@ class CustomDotIndicator extends StatelessWidget {
       height: 10,
       width: isActive ? 32 : 8,
       decoration: ShapeDecoration(
-        color: isActive ? Color(0xff4EB7F2) : Colors.white,
+        color: isActive ? Color(0xff4EB7F2) : Color(0xffE8E8E8),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadiusDirectional.circular(12),
         ),
