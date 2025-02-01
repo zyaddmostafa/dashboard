@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsivedashboard/views/widgets/icome_section_body.dart';
 import 'package:responsivedashboard/views/widgets/income_chart.dart';
 import 'package:responsivedashboard/views/widgets/income_details_list_view.dart';
 import 'package:responsivedashboard/views/widgets/income_section_header.dart';
@@ -12,15 +13,7 @@ class IncomeSection extends StatelessWidget {
       children: [
         IncomeSectionHeader(),
         Expanded(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Expanded(child: IncomeChart()),
-              Expanded(
-                child: IncomeDetailsListView(),
-              )
-            ],
-          ),
+          child: IncomeSectionBody(),
         )
       ],
     );
