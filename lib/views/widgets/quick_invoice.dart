@@ -13,12 +13,9 @@ class QuickInvoice extends StatelessWidget {
       child: Column(
         children: [
           QuickInvoiceHeader(),
-          SizedBox(
-            height: 24,
-          ),
           LatestTransaction(),
           Divider(
-            height: 48,
+            height: 24,
             color: Color(0xffF1F1F1),
           ),
           QuickInvoiceForm(),
