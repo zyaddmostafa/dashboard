@@ -19,6 +19,9 @@ class TransactionHistorySection extends StatelessWidget {
           '13 April 2022',
           style: Styles.styleMedium16.copyWith(color: Color(0xffAAAAAA)),
         ),
+        SizedBox(
+          height: 16,
+        ),
         TransactionHistoryListView(),
       ],
     );

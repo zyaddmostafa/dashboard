@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsivedashboard/views/widgets/all_expenses_and_quick_invoice_section.dart';
-import 'package:responsivedashboard/views/widgets/custom_dot_indicator.dart';
 import 'package:responsivedashboard/views/widgets/custom_drawer.dart';
-import 'package:responsivedashboard/views/widgets/dots_indicator.dart';
-import 'package:responsivedashboard/views/widgets/my_card_page_view.dart';
-import 'package:responsivedashboard/views/widgets/my_card_section.dart';
-import 'package:responsivedashboard/views/widgets/transaction_history_section.dart';
+import 'package:responsivedashboard/views/widgets/income_chart.dart';
+import 'package:responsivedashboard/views/widgets/income_section.dart';
 
 class DashboardDesktopLayout extends StatelessWidget {
   const DashboardDesktopLayout({super.key});
@@ -25,7 +22,7 @@ class DashboardDesktopLayout extends StatelessWidget {
         SizedBox(
           width: 24,
         ),
-        Expanded(child: TransactionHistorySection())
+        Expanded(child: IncomeChart())
       ],
     );
   }
