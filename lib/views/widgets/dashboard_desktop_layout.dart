@@ -3,6 +3,8 @@ import 'package:responsivedashboard/views/widgets/all_expenses_and_quick_invoice
 import 'package:responsivedashboard/views/widgets/custom_drawer.dart';
 import 'package:responsivedashboard/views/widgets/income_chart.dart';
 import 'package:responsivedashboard/views/widgets/income_section.dart';
+import 'package:responsivedashboard/views/widgets/my_card_and_transaction_history.dart';
+import 'package:responsivedashboard/views/widgets/my_card_section.dart';
 
 class DashboardDesktopLayout extends StatelessWidget {
   const DashboardDesktopLayout({super.key});
@@ -22,7 +24,17 @@ class DashboardDesktopLayout extends StatelessWidget {
         SizedBox(
           width: 24,
         ),
-        Expanded(child: IncomeSection())
+        Expanded(
+          child: Column(
+            children: [
+              MyCardAndTransactionHistory(),
+              SizedBox(
+                height: 24,
+              ),
+              Expanded(child: IncomeSection())
+            ],
+          ),
+        )
       ],
     );
   }
