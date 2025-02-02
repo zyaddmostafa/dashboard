@@ -14,7 +14,7 @@ class IncomeSectionHeader extends StatelessWidget {
       children: [
         Text(
           'Income',
-          style: Styles.styleSemibold20,
+          style: Styles.styleSemibold20(context),
         ),
         Container(
           padding: const EdgeInsets.all(12),

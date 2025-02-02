@@ -14,7 +14,7 @@ class LatestTransaction extends StatelessWidget {
           alignment: AlignmentDirectional.topStart,
           child: Text(
             'Latest Transaction',
-            style: Styles.styleMedium16,
+            style: Styles.styleMedium16(context),
           ),
         ),
         SizedBox(
