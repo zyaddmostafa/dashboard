@@ -94,7 +94,7 @@ double getFontSize(BuildContext context, {required double fontSize}) {
 double getScaleFactor(BuildContext context) {
   double width = MediaQuery.of(context).size.width;
 
-  if (width < 600) {
+  if (width < 800) {
     return width / 550;
   } else if (width < 1200) {
     return width / 1000;

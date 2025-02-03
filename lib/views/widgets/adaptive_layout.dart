@@ -11,12 +11,12 @@ class AdaptiveLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth < 600) {
+        if (constraints.maxWidth < 800) {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: mobileLayout(context),
           );
-        } else if (constraints.maxWidth < 900) {
+        } else if (constraints.maxWidth < 1200) {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: tabletLayout(context),

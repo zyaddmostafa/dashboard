@@ -28,18 +28,25 @@ class InActiveExpensesItem extends StatelessWidget {
           const SizedBox(
             height: 34,
           ),
-          Text(
-            model.title,
-            style: Styles.styleSemibold16(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              model.title,
+              style: Styles.styleSemibold16(context),
+            ),
           ),
           SizedBox(
             height: 8,
           ),
-          Text(model.date, style: Styles.styleRegular14(context)),
+          FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(model.date, style: Styles.styleRegular14(context))),
           SizedBox(
             height: 16,
           ),
-          Text(model.price, style: Styles.styleSemibold24(context)),
+          FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(model.price, style: Styles.styleSemibold24(context))),
         ],
       ),
     );
@@ -71,23 +78,32 @@ class ActiveExpensesItem extends StatelessWidget {
           const SizedBox(
             height: 34,
           ),
-          Text(
-            model.title,
-            style:
-                Styles.styleSemibold16(context).copyWith(color: Colors.white),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              model.title,
+              style:
+                  Styles.styleSemibold16(context).copyWith(color: Colors.white),
+            ),
           ),
           SizedBox(
             height: 8,
           ),
-          Text(model.date,
-              style:
-                  Styles.styleRegular14(context).copyWith(color: Colors.white)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(model.date,
+                style: Styles.styleRegular14(context)
+                    .copyWith(color: Colors.white)),
+          ),
           SizedBox(
             height: 16,
           ),
-          Text(model.price,
-              style: Styles.styleSemibold24(context)
-                  .copyWith(color: Colors.white)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(model.price,
+                style: Styles.styleSemibold24(context)
+                    .copyWith(color: Colors.white)),
+          ),
         ],
       ),
     );

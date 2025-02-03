@@ -12,7 +12,7 @@ class AllExpensesItemListView extends StatefulWidget {
 }
 
 class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
-  List<AllExpensesItemModel> allExpensesList = const [
+  List<AllExpensesItemModel> item = const [
     AllExpensesItemModel(
       image: Assets.imagesMoneyss,
       title: 'Balance',
@@ -36,40 +36,54 @@ class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
   @override
   Widget build(BuildContext context) {
     return Row(
-        children: allExpensesList.asMap().entries.map((e) {
-      final index = e.key;
-      final item = e.value;
-      if (index == 1) {
-        return Expanded(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 12),
-            child: GestureDetector(
-              onTap: () {
-                setState(() {
-                  selectedindex = index;
-                });
-              },
-              child: AllExpensesItem(
-                isslected: selectedindex == index,
-                model: item,
-              ),
-            ),
-          ),
-        );
-      } else {
-        return Expanded(
+      children: [
+        Expanded(
           child: GestureDetector(
             onTap: () {
-              updateSelectedIndex(index);
+              setState(() {
+                updateSelectedIndex(0);
+              });
             },
             child: AllExpensesItem(
-              isslected: selectedindex == index,
-              model: item,
+              isslected: selectedindex == 0,
+              model: item[0],
             ),
           ),
-        );
-      }
-    }).toList());
+        ),
+        SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                updateSelectedIndex(1);
+              });
+            },
+            child: AllExpensesItem(
+              isslected: selectedindex == 1,
+              model: item[1],
+            ),
+          ),
+        ),
+        SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                updateSelectedIndex(2);
+              });
+            },
+            child: AllExpensesItem(
+              isslected: selectedindex == 2,
+              model: item[2],
+            ),
+          ),
+        )
+      ],
+    );
   }
 
   void updateSelectedIndex(int index) {
